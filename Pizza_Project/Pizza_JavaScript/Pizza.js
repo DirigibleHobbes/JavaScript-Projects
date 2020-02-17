@@ -24,17 +24,17 @@ function getReceipt() {
     console.log(selectedSize+" = $"+sizeTotal+".00");
     console.log("size text1: "+text1);
     console.log("subtotal: $"+runningTotal+".00");
-    getMeat(runningTotal, text1);
+    getToppings(runningTotal, text1);
 };
 
-function getMeat(runningTotal, text1) {
+function getToppings(runningTotal, text1) {
     var meatTotal = 0;
     var selectedMeat = [];
-    var meatArray = document.getElementsByClassName("meats");
+    var meatArray = document.getElementsByClassName("toppings");
     for (var j = 0; j < meatArray.length; j++) {
         if (meatArray[j].checked) {
             selectedMeat.push(meatArray[j].value);
-            console.log("selected meat item: ("+meatArray[j].value+")");
+            console.log("selected topping: ("+meatArray[j].value+")");
             text1 =text1+meatArray[j].value+"<br>";
         }
     }
